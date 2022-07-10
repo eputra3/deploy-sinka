@@ -28,26 +28,13 @@
             </div>
             <div class="col-lg-8">
                 <div class="row gx-5 row-cols-1 row-cols-md-2">
-                    <div class="col mb-5 h-100">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> 14/1/2022</div>
-                        <h2 class="h5">Jadwal Imunisasi 1</h2>
-                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                    </div>
-                    <div class="col mb-5 h-100">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> 14/1/2022</div>
-                        <h2 class="h5">Jadwal Imunisasi 2</h2>
-                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                    </div>
-                    <div class="col mb-5 h-100">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> 14/1/2022</div>
-                        <h2 class="h5">Jadwal Imunisasi 3</h2>
-                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                    </div>
-                    <div class="col mb-5 h-100">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> 14/1/2022</div>
-                        <h2 class="h5">Jadwal Imunisasi 4</h2>
-                        <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                    </div>
+                    <?php foreach ($data_jadwal_imunisasi as $item) : ?>
+                        <div class="col mb-5 h-100">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> <?= $item['tanggal_jadwal_imunisasi']; ?>, <?= $item['waktu_jadwal_imunisasi']; ?></div>
+                            <h2 class="h5"><?= $item['nama_jadwal_imunisasi']; ?></h2>
+                            <p class="mb-0"><?= substr($item['deskripsi_jadwal_imunisasi'], 0, 150) ?></p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -153,13 +140,14 @@
                 </div>
             </div>
         </div>
+        <!-- <?php echo d($data_artikel); ?> -->
         <div class="row gx-5">
             <?php foreach ($data_artikel as $item) : ?>
                 <div class="col-lg-4 mb-5">
                     <div class="card h-100 shadow border-0">
                         <img class="card-img-top" src="/img/<?= $item['gambar_artikel']; ?>" alt="..." />
                         <div class="card-body p-4">
-                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Baru</div>
                             <a class="text-decoration-none link-dark stretched-link" href="#!">
                                 <h5 class="card-title mb-3"><?= $item['judul']; ?></h5>
                             </a>
@@ -168,10 +156,10 @@
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                             <div class="d-flex align-items-end justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                    <img class="rounded-circle me-3" src="https://pdki-indonesia-api.dgip.go.id/storage/data-merek/application-brand/2022/04/20/62fb6559-2c8c-4b02-bcee-73d5c7f757a2.jpg" width="10%" alt=" ..." />
                                     <div class="small">
-                                        <div class="fw-bold"><? $item['penulis'] ?></div>
-                                        <div class="text-muted">March 12, 2022 &middot; 6 min read</div>
+                                        <div class="fw-bold">Publikasi :</div>
+                                        <div class="text-muted"><?= $item['created_at']; ?></div>
                                     </div>
                                 </div>
                             </div>
