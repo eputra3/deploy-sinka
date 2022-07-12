@@ -3,12 +3,12 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Baru Riwayat Imunisasi</h1>
-    <p class="mb-4">Data Master Pembuatan Riwayat Imunisasi Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Data Riwayat Imunisasi</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Riwayat Imunisasi Baru</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Riwayat Imunisasi Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Riwayat Imunisasi</h6>
         </div>
         <div class="card-body">
             <div class="row">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Judul Riwayat Imunisasi</label>
+                            <label for="" class="col-sm-4 col-form-label">Keterangan</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('judul_riwayat_imunisasi') ? 'is-invalid' : '' ?>" id="text" name="judul_riwayat_imunisasi" value="<?= old('judul_riwayat_imunisasi') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -73,13 +73,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Catatan Riwayat Imunisasi</label>
+                            <label for="" class="col-sm-4 col-form-label">Catatan</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="catatan_riwayat_imunisasi" rows="3" placeholder="<?= old('catatan_riwayat_imunisasi') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="formFile" class="col-sm-4 col-form-label">Gambar Imunisasi</label>
+                            <label for="formFile" class="col-sm-4 col-form-label">Foto</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control <?= $validation->hasError('gambar_riwayat_imunisasi') ? 'is-invalid' : '' ?>" name="gambar_riwayat_imunisasi" id="gambar_riwayat_imunisasi" value="<?= old('gambar_riwayat_imunisasi') ?>" onchange="previewImage()">
                                 <div id="validationServer03Feedback" class="invalid-feedback">

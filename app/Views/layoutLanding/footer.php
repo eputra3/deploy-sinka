@@ -11,6 +11,8 @@
                 <a class="link-light small" href="#!">Ketentuan</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="#!">Kontak</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="<?php echo site_url('/user') ?>">Masuk</a>
             </div>
         </div>
     </div>

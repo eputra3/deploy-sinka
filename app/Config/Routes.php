@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 
 // Landing Page
 $routes->get('/', 'LandingPage::index');
+$routes->get('artikel-berita-detail/(:any)', 'LandingPage::detail/$1');
 
 // Restricting Admin
 $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);

@@ -3,12 +3,12 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Baru Anak</h1>
-    <p class="mb-4">Data Master Pembuatan Anak Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Data Anak</h1>
+    <!-- <p class="mb-4">Pembuatan Data Baru Anak</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Anak Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Anak</h6>
         </div>
         <div class="card-body">
             <div class="row">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Nama Anak</label>
+                            <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('nama_anak') ? 'is-invalid' : '' ?>" id="text" name="nama_anak" value="<?= old('nama_anak') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -43,13 +43,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Tempat Lahir Anak</label>
+                            <label for="" class="col-sm-4 col-form-label">Tempat Lahir</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="tempat_lahir_anak" rows="3" placeholder="<?= old('tempat_lahir_anak') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="tanggal_lahir_anak" class="col-sm-4 col-form-label">Tanggal Lahir Anak</label>
+                            <label for="tanggal_lahir_anak" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm input-group date" data-provide="datepicker">
                                 <input type="text" class="form-control" name="tanggal_lahir_anak">
                                 <div class="input-group-addon">
@@ -91,13 +91,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Alamat Anak</label>
+                            <label for="" class="col-sm-4 col-form-label">Alamat Lengkap</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="alamat_anak" rows="3" placeholder="<?= old('alamat_anak') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="formFile" class="col-sm-4 col-form-label">Gambar Anak</label>
+                            <label for="formFile" class="col-sm-4 col-form-label">Foto</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control <?= $validation->hasError('gambar_anak') ? 'is-invalid' : '' ?>" name="gambar_anak" id="gambar_anak" value="<?= old('gambar_anak') ?>" onchange="previewImage()">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-4 col-form-label">Ayah</label>
+                    <label for="" class="col-sm-4 col-form-label">Nama Ayah</label>
                     <div class="col-sm">
                         <select class="form-control js-example-basic-single1" id="" name="ayah">
                             <?php foreach ($ayah as $value1) : ?>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-4 col-form-label">Ibu</label>
+                    <label for="" class="col-sm-4 col-form-label">Nama Ibu</label>
                     <div class="col-sm">
                         <select class="form-control js-example-basic-single2" id="" name="ibu">
                             <?php foreach ($ibu as $value2) : ?>
@@ -156,7 +156,6 @@
 </script>
 
 <script type="text/javascript">
-    // $(document).off('.datepicker.data-api');
     $('.datepicker').datepicker({
         format: 'dd/mm/yyyy',
         startDate: '-3d'

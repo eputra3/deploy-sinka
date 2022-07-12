@@ -8,9 +8,9 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="<?php echo site_url('/') ?>">Beranda</a></li>
                         <li class="nav-item"><a class="nav-link" href="#jadwal-imunisasi">Imunisasi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Faskes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#artikel-berita">Artikel/Berita</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo site_url('/user') ?>">Masuk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#lokasi-faskes">Faskes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#artikel-berita">Artikel / Berita</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="">Masuk</a></li> -->
                     </ul>
                 </div>
             </div>

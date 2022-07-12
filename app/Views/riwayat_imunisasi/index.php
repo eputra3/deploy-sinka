@@ -5,8 +5,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Riwayat Imunisasi</h1>
-    <p class="mb-4">Data Master Riwayat Imunisasi</p>
+    <h1 class="h3 mb-2 text-gray-800">Riwayat Imunisasi</h1>
+    <!-- <p class="mb-4">Data Master Riwayat Imunisasi</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -32,14 +32,14 @@
             <h6 class="m-0 font-weight-bold text-primary">List Riwayat Imunisasi</h6>
         </div>
         <div class="card-body">
-            <a href="<?= route_to('tambah-riwayat-imunisasi') ?>" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Riwayat Imunisasi</a>
+            <a href="<?= route_to('tambah-riwayat-imunisasi') ?>" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Data Riwayat Imunisasi</a>
             <div class="table">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>No</th>
                             <th>Nama Anak</th>
-                            <th>Judul Riwayat Imunisasi</th>
+                            <th>Keterangan</th>
                             <th>Jenis Imunisasi</th>
                             <th>Tanggal Imunisasi</th>
                             <th>Action</th>

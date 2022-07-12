@@ -10,16 +10,16 @@
                     <h1 class="display-5 fw-bolder text-white mb-2">Sistem Informasi Kesehatan Anak</h1>
                     <p class="lead fw-normal text-white mb-4">SINKA (Sistem Informasi Kesehatan Ibu dan Anak) merupakan aplikasi untuk informasi dan edukasi terkait kesehatan Ibu dan Anak untuk mengatasi stunting di Provinsi Nusa Tenggara Timur (NTT).</p>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Unduh</a>
+                        <!-- <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Unduh</a> -->
                         <a class="btn btn-outline-light btn-lg px-4" href="#jadwal-imunisasi">Lebih Banyak</a>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://images.unsplash.com/photo-1527490087278-9c75be0b8052?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80" alt="..." /></div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/gub-wagub-ntt-biru.png" alt="..." /></div>
         </div>
     </div>
 </header>
-<!-- Features section-->
+<!-- Jadwal Imunisasi section-->
 <section class="py-5" id="features">
     <div class="container px-5 my-5">
         <div class="row gx-5">
@@ -46,7 +46,7 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
                 <div class="text-center">
-                    <h2 class="fw-bolder" id="artikel-berita">Lokasi Faskes</h2>
+                    <h2 class="fw-bolder" id="lokasi-faskes">Lokasi Faskes</h2>
                     <p class="lead fw-normal text-muted mb-5">Peta sebaran lokasi Fasilitas Kesehatan (Faskes) Ibu dan Anak di Provinsi NTT.</p>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                         <img class="card-img-top" src="/img/<?= $item['gambar_artikel']; ?>" alt="..." />
                         <div class="card-body p-4">
                             <div class="badge bg-primary bg-gradient rounded-pill mb-2">Baru</div>
-                            <a class="text-decoration-none link-dark stretched-link" href="#!">
+                            <a class="text-decoration-none link-dark stretched-link" href="artikel-berita-detail/<?= $item['slug'] ?>">
                                 <h5 class="card-title mb-3"><?= $item['judul']; ?></h5>
                             </a>
                             <p class="card-text mb-0"><?= substr($item['isi'], 0, 150) ?></p>
@@ -168,6 +168,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
+
         <!-- Call to action-->
         <!-- <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
             <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">

@@ -31,6 +31,16 @@ class LandingPage extends BaseController
         // d($data_artikel);
         return view('pagesLanding/beranda', $data);
     }
+    public function detail($slug)
+    {
+        $data_artikel = $this->_artikel_model->getArtikel($slug);
+        // dd($data_artikel);
+        $data = [
+            'title' => 'fsefsef',
+            'data_artikel' => $data_artikel
+        ];
+        return view('pagesLanding/detail_artikel_berita', $data);
+    }
     public function tentang()
     {
 

@@ -3,8 +3,8 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Detail Data Ayah</h1>
-    <p class="mb-4">Data Master Detail Ayah</p>
+    <h1 class="h3 mb-2 text-gray-800">Detail</h1>
+    <!-- <p class="mb-4">Data Master Detail Ayah</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -22,55 +22,55 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Identitas Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Identitas</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['nama_identitas']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama Lengkap</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['nama_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Tempat Lahir Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Tempat Lahir</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['tempat_lahir_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Tanggal Lahir Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['tanggal_lahir_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Email Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['email_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Nomor HP Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Nomor HP</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['no_hp_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Pekerjaan Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Pekerjaan</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['nama_pekerjaan']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Penghasilan Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Penghasilan</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['penghasilan_ayah']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Alamat Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Alamat Lengkap</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ayah['alamat_ayah']; ?>">
                             </div>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Gambar Identitas Ayah</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Foto Identitas</label>
                             <div class="col-sm">
                                 <img class="img-fluid" src="/img/<?= $data_ayah['gambar_identitas_ayah']; ?>" alt="..." width="450" />
                             </div>

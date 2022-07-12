@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Ubah Data Ibu</h1>
-    <p class="mb-4">Data Master Perubahan Data Ibu</p>
+    <h1 class="h3 mb-2 text-gray-800">Ubah</h1>
+    <!-- <p class="mb-4">Data Master Perubahan Data Ibu</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data Ibu</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Ibu</h6>
         </div>
         <div class="card-body">
             <a href="/ibu" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -20,7 +20,7 @@
                 <?= csrf_field() ?>
                 <input type="hidden" value="<?= $result['slug_ibu'] ?>" name="slug_ibu_lama">
                 <div class="row mb-3">
-                    <label for="identitas_ibu" class="col-sm-4 col-form-label">Identitas Ayah</label>
+                    <label for="identitas_ibu" class="col-sm-4 col-form-label">Identitas</label>
                     <div class="col-sm">
                         <select class="form-control" name="identitas_ibu">
                             <?php foreach ($identitas as $item) : ?>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="nama_ibu" class="col-sm-4 col-form-label">Nama Ayah</label>
+                    <label for="nama_ibu" class="col-sm-4 col-form-label">Nama Lengkap</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('nama_ibu') ? 'is-invalid' : '' ?>" id="text" name="nama_ibu" value="<?= old('nama_ibu', $result['nama_ibu']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -39,13 +39,13 @@
                     </div>
                 </div>
                 <div class=" row mb-3">
-                    <label for="tempat_lahir_ibu" class="col-sm-4 col-form-label">Tempat Lahir Ayah</label>
+                    <label for="tempat_lahir_ibu" class="col-sm-4 col-form-label">Tempat Lahir</label>
                     <div class="col-sm">
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="tempat_lahir_ibu" rows="3"><?= htmlspecialchars(old('tempat_lahir_ibu', $result['tempat_lahir_ibu'])); ?></textarea>
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="tanggal_lahir_ibu" class="col-sm-4 col-form-label">Tanggal Lahir Ayah</label>
+                    <label for="tanggal_lahir_ibu" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm input-group date" data-provide="datepicker">
                         <input type="text" class="form-control" value="<?= old('tempat_lahir_ibu', $result['tempat_lahir_ibu']) ?>" name="tempat_lahir_ibu">
                         <div class="input-group-addon">
@@ -54,20 +54,20 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="email_ibu" class="col-sm-4 col-form-label">Email Ayah</label>
+                    <label for="email_ibu" class="col-sm-4 col-form-label">Email</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('email_ibu') ? 'is-invalid' : '' ?>" id="text" name="email_ibu" value="<?= old('email_ibu', $result['email_ibu']) ?>">
 
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="no_hp_ibu" class="col-sm-4 col-form-label">Nomor HP Ayah</label>
+                    <label for="no_hp_ibu" class="col-sm-4 col-form-label">Nomor HP</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('no_hp_ibu') ? 'is-invalid' : '' ?>" id="text" name="no_hp_ibu" value="<?= old('no_hp_ibu', $result['no_hp_ibu']) ?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-4 col-form-label">Pekerjaan Ayah</label>
+                    <label for="" class="col-sm-4 col-form-label">Pekerjaan</label>
                     <div class="col-sm">
                         <select class="form-control" id="specificSizeSelect" name="pekerjaan_ibu">
                             <?php foreach ($pekerjaan as $value) : ?>
@@ -77,14 +77,14 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="penghasilan_ibu" class="col-sm-4 col-form-label">Penghasilan Ayah</label>
+                    <label for="penghasilan_ibu" class="col-sm-4 col-form-label">Penghasilan</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('penghasilan_ibu') ? 'is-invalid' : '' ?>" id="text" name="penghasilan_ibu" value="<?= old('penghasilan_ibu', $result['penghasilan_ibu']) ?>">
 
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="gambar_identitas_ibu" class="col-sm-4 col-form-label">Gambar</label>
+                    <label for="gambar_identitas_ibu" class="col-sm-4 col-form-label">Foto Identitas</label>
                     <div class="col-sm">
                         <input type="file" class="form-control <?= $validation->hasError('gambar_identitas_ibu') ? 'is-invalid' : '' ?>" name="gambar_identitas_ibu" id="gambar_identitas_ibu" value="<?= old('gambar_identitas_ibu') ?>" onchange="previewImage()">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-4 col-form-label">Istri</label>
+                    <label for="" class="col-sm-4 col-form-label">Nama Suami</label>
                     <div class="col-sm">
                         <select class="form-control js-example-basic-single" id="specificSizeSelect" name="suami">
                             <?php foreach ($ayah as $value) : ?>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="author_user_id" class="col-sm-4 col-form-label">Penulis</label>
+                    <label for="author_user_id" class="col-sm-4 col-form-label">Penginput</label>
                     <div class="sb-1 mt-1">
                         <input type="hidden" class="form-control-plaintext" value="<?= user()->id ?>" name="author_user_id" readonly><?= user()->username; ?>
                     </div>

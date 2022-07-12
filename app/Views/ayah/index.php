@@ -5,8 +5,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Ayah</h1>
-    <p class="mb-4">Data Master Ayah</p>
+    <h1 class="h3 mb-2 text-gray-800">Ayah</h1>
+    <!-- <p class="mb-4">Data Master Ayah</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -38,9 +38,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Ayah</th>
-                            <th>Pekerjaan Ayah</th>
-                            <th>Nama Ibu</th>
+                            <th>Nama Lengkap</th>
+                            <th>Pekerjaan</th>
+                            <th>Nama Istri</th>
                             <th>Jumlah Anak</th>
                             <th>Action</th>
                         </tr>

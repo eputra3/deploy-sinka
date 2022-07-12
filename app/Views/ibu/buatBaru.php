@@ -3,12 +3,12 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Baru Ibu</h1>
-    <p class="mb-4">Data Master Pembuatan Ibu Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Data Ibu</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Ibu Baru</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ibu Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Ibu</h6>
         </div>
         <div class="card-body">
             <div class="row">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Identitas Ibu</label>
+                            <label for="" class="col-sm-4 col-form-label">Identitas</label>
                             <div class="col-sm">
                                 <select class="form-control" id="specificSizeSelect" name="identitas_ibu">
                                     <?php foreach ($identitas as $item) : ?>
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="nama_ibu" class="col-sm-4 col-form-label">Nama Ibu</label>
+                            <label for="nama_ibu" class="col-sm-4 col-form-label">Nama Lengkap</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('nama_ibu') ? 'is-invalid' : '' ?>" id="text" name="nama_ibu" value="<?= old('nama_ibu') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -44,13 +44,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="tempat_lahir_ibu" class="col-sm-4 col-form-label">Tempat Lahir Ibu</label>
+                            <label for="tempat_lahir_ibu" class="col-sm-4 col-form-label">Tempat Lahir</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="tempat_lahir_ibu" rows="3" placeholder="<?= old('tempat_lahir_ibu') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="tanggal_lahir_ibu" class="col-sm-4 col-form-label">Tanggal Lahir Ibu</label>
+                            <label for="tanggal_lahir_ibu" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm input-group date" data-provide="datepicker">
                                 <input type="text" class="form-control" name="tanggal_lahir_ibu">
                                 <div class="input-group-addon">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="email_ibu" class="col-sm-4 col-form-label">Email Ibu</label>
+                            <label for="email_ibu" class="col-sm-4 col-form-label">Email</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('email_ibu') ? 'is-invalid' : '' ?>" id="text" name="email_ibu" value="<?= old('email_ibu') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="no_hp_ibu" class="col-sm-4 col-form-label">Nomor HP Ibu</label>
+                            <label for="no_hp_ibu" class="col-sm-4 col-form-label">Nomor HP</label>
                             <div class="col-sm">
                                 <input type="number" class="form-control <?= $validation->hasError('no_hp_ibu') ? 'is-invalid' : '' ?>" id="text" name="no_hp_ibu" value="<?= old('no_hp_ibu') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Pekerjaan Ibu</label>
+                            <label for="" class="col-sm-4 col-form-label">Pekerjaan</label>
                             <div class="col-sm">
                                 <select class="form-control" id="specificSizeSelect" name="pekerjaan_ibu">
                                     <?php foreach ($pekerjaan as $value) : ?>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Penghasilan Ibu</label>
+                            <label for="" class="col-sm-4 col-form-label">Penghasilan</label>
                             <div class="col-sm">
                                 <input type="number" class="form-control <?= $validation->hasError('penghasilan_ibu') ? 'is-invalid' : '' ?>" id="text" name="penghasilan_ibu" value="<?= old('penghasilan_ibu') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -96,13 +96,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Alamat Ibu</label>
+                            <label for="" class="col-sm-4 col-form-label">Alamat Lengkap</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="alamat_ibu" rows="3" placeholder="<?= old('alamat_ibu') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="formFile" class="col-sm-4 col-form-label">Gambar Identitas Ibu</label>
+                            <label for="formFile" class="col-sm-4 col-form-label">Foto Identitas</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control <?= $validation->hasError('gambar_identitas_ibu') ? 'is-invalid' : '' ?>" name="gambar_identitas_ibu" id="gambar_identitas_ibu" value="<?= old('gambar_identitas_ibu') ?>" onchange="previewImage()">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-4 col-form-label">Suami</label>
+                    <label for="" class="col-sm-4 col-form-label">Nama Suami</label>
                     <div class="col-sm">
                         <select class="form-control js-example-basic-single" id="specificSizeSelect" name="suami">
                             <?php foreach ($ayah as $value) : ?>
@@ -157,7 +157,6 @@
 </script>
 
 <script type="text/javascript">
-    // $(document).off('.datepicker.data-api');
     $('.datepicker').datepicker({
         format: 'dd/mm/yyyy',
         startDate: '-3d'
