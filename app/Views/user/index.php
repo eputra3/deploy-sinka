@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Profil Saya</h1>
-    <p class="mb-4">Data Master Profil Pribadi</p>
+    <!-- <p class="mb-4">Data Master Profil Pribadi</p> -->
     <!--Card data list daftar pengguna -->
     <div class="">
         <div class="row">
