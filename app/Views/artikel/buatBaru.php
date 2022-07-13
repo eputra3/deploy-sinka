@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Artikel</h1>
-    <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p>
+    <h1 class="h3 mb-2 text-gray-800">Buat Baru Artikel</h1>
+    <!-- <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Artikel Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Baru Artikel</h6>
         </div>
         <div class="card-body">
             <a href="/artikel" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -31,7 +31,7 @@
                 <div class="row mb-3">
                     <label for="artikel_kategori_id" class="col-sm-2 col-form-label">Kategori</label>
                     <div class="col-sm-10">
-                        <select class="form-select" id="specificSizeSelect" name="artikel_kategori_id">
+                        <select class="form-select form-control" id="specificSizeSelect" name="artikel_kategori_id">
                             <?php foreach ($artikel_kategori as $item) : ?>
                                 <option value="<?= $item['artikel_kategori_id'] ?>" <?= old('artikel_kategori_id') == $item['artikel_kategori_id'] ? 'selected' : '' ?>><?= $item['nama_artikel_kategori'] ?></option>
                             <?php endforeach; ?>

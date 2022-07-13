@@ -3,12 +3,12 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Baru Riwayat Pertumbuhan</h1>
-    <p class="mb-4">Data Master Pembuatan Riwayat Pertumbuhan Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Data Riwayat Pertumbuhan</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Riwayat Pertumbuhan Baru</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Riwayat Pertumbuhan Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Riwayat Pertumbuhan</h6>
         </div>
         <div class="card-body">
             <div class="row">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Judul Riwayat Pertumbuhan</label>
+                            <label for="" class="col-sm-4 col-form-label">Keterangan</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('judul_riwayat_pertumbuhan') ? 'is-invalid' : '' ?>" id="text" name="judul_riwayat_pertumbuhan" value="<?= old('judul_riwayat_pertumbuhan') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Nama Anak</label>
+                            <label for="" class="col-sm-4 col-form-label">Nama Lengkap</label>
                             <div class="col-sm">
                                 <select class="form-control js-example-basic-single1" id="" name="id_anak">
                                     <?php foreach ($anak as $value1) : ?>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="tanggal_riwayat_pertumbuhan" class="col-sm-4 col-form-label">Tanggal Riwayat Pertumbuhan</label>
+                            <label for="tanggal_riwayat_pertumbuhan" class="col-sm-4 col-form-label">Tanggal Pengukuran</label>
                             <div class="col-sm input-group date" data-provide="datepicker">
                                 <input type="text" class="form-control" name="tanggal_riwayat_pertumbuhan">
                                 <div class="input-group-addon">
@@ -99,13 +99,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Catatan Riwayat Pertumbuhan</label>
+                            <label for="" class="col-sm-4 col-form-label">Catatan</label>
                             <div class="col-sm">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="catatan_riwayat_pertumbuhan" rows="3" placeholder="<?= old('catatan_riwayat_pertumbuhan') ?>"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="formFile" class="col-sm-4 col-form-label">Gambar Pertumbuhan</label>
+                            <label for="formFile" class="col-sm-4 col-form-label">Foto</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control <?= $validation->hasError('gambar_riwayat_pertumbuhan') ? 'is-invalid' : '' ?>" name="gambar_riwayat_pertumbuhan" id="gambar_riwayat_pertumbuhan" value="<?= old('gambar_riwayat_pertumbuhan') ?>" onchange="previewImage()">
                                 <div id="validationServer03Feedback" class="invalid-feedback">

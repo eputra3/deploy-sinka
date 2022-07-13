@@ -6,7 +6,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Kota dan Kabupaten</h1>
-    <p class="mb-4">Data Master Kota dan Kabupaten di NTT</p>
+    <!-- <p class="mb-4">Data Master Kota dan Kabupaten di NTT</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -40,7 +40,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Kota/Kabupaten</th>
+                                        <th>Nama</th>
                                         <th>Logo</th>
                                         <th>Action</th>
                                     </tr>

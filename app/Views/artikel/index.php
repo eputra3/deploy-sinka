@@ -5,8 +5,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Daftar Artikel</h1>
-    <p class="mb-4">Kumpulan artikel Kesehatan Ibu dan Anak</p>
+    <h1 class="h3 mb-2 text-gray-800">Artikel</h1>
+    <!-- <p class="mb-4">Kumpulan artikel Kesehatan Ibu dan Anak</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>

@@ -5,8 +5,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Riwayat Pertumbuhan</h1>
-    <p class="mb-4">Data Master Riwayat Pertumbuhan</p>
+    <h1 class="h3 mb-2 text-gray-800">Riwayat Pertumbuhan</h1>
+    <!-- <p class="mb-4">Data Master Riwayat Pertumbuhan</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -32,15 +32,15 @@
             <h6 class="m-0 font-weight-bold text-primary">List Riwayat Pertumbuhan</h6>
         </div>
         <div class="card-body">
-            <a href="<?= route_to('tambah-riwayat-pertumbuhan') ?>" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Riwayat Pertumbuhan</a>
+            <a href="<?= route_to('tambah-riwayat-pertumbuhan') ?>" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Data Riwayat Pertumbuhan</a>
             <div class="table">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Anak</th>
-                            <th>Judul Riwayat Pertumbuhan</th>
-                            <th>Tanggal Priwayat Perrtumbuhan</th>
+                            <th>Nama Lengkap</th>
+                            <th>Keterangan</th>
+                            <th>Tanggal Pengukuran</th>
                             <th>Action</th>
                         </tr>
                     </thead>

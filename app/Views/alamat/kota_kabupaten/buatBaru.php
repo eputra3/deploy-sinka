@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Kota Kabupaten</h1>
-    <p class="mb-4">Data Master Pembuatan Kota Kabupaten dan Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Kota Kabupaten</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Kota Kabupaten dan Baru</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Kota dan Kabupaten Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Kota/Kabupaten</h6>
         </div>
         <div class="card-body">
             <a href="/kota-kabupaten" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="gambar_kota_kabupaten" class="col-sm-2 col-form-label">Gambar</label>
+                    <label for="gambar_kota_kabupaten" class="col-sm-2 col-form-label">Logo</label>
                     <div class="col-sm-4">
                         <input type="file" class="form-control <?= $validation->hasError('gambar_kota_kabupaten') ? 'is-invalid' : '' ?>" name="gambar_kota_kabupaten" id="gambar_kota_kabupaten" value="<?= old('gambar_kota_kabupaten') ?>" onchange="previewImg()">
                         <div id="validationServer03Feedback" class="invalid-feedback">

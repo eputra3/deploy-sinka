@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Artikel</h1>
-    <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p>
+    <h1 class="h3 mb-2 text-gray-800">Ubah</h1>
+    <!-- <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Artikel</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Artikel</h6>
         </div>
         <div class="card-body">
             <a href="/artikel" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -20,7 +20,7 @@
                 <?= csrf_field() ?>
                 <input type="hidden" value="<?= $result['slug'] ?>" name="slug_lama">
                 <div class="row mb-3">
-                    <label for="judul" class="col-sm-2 col-form-label">Ubah Judul</label>
+                    <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control <?= $validation->hasError('judul') ? 'is-invalid' : '' ?>" id="text" name="judul" value="<?= old('judul', $result['judul']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="row mb-3">
                     <label for="artikel_kategori_id" class="col-sm-2 col-form-label">Kategori</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-10">
                         <select class="form-control" name="artikel_kategori_id">
                             <?php foreach ($artikel_kategori as $item) : ?>
                                 <option value="<?= $item['artikel_kategori_id'] ?>" <?= old('artikel_kategori_id', $result['artikel_kategori_id']) == $item['artikel_kategori_id'] ? 'selected' : '' ?>><?= $item['nama_artikel_kategori'] ?></option>

@@ -4,8 +4,8 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Kelurahan dan Desa</h1>
-    <p class="mb-4">Data Master Pembuatan Kecamatan Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Kelurahan/Desa</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Kecamatan Baru</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="kecamatan_id" class="col-sm-2 col-form-label">Kota/Kabupaten</label>
+                    <label for="kecamatan_id" class="col-sm-2 col-form-label">Kecamatan</label>
                     <div class="col-sm-10">
                         <select class="form-select" id="specificSizeSelect" name="kecamatan_id">
                             <?php foreach ($kecamatan as $item) : ?>

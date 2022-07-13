@@ -4,62 +4,90 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Artikel</h1>
-    <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p>
+    <h1 class="h3 mb-2 text-gray-800">Ubah</h1>
+    <!-- <p class="mb-4">Buat artikel tentang kesehatan Ibu dan Anak</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Artikel</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Jadwal Imunisasi</h6>
         </div>
         <div class="card-body">
-            <a href="/artikel" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
+            <a href="/jadwal-imunisasi" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="container-fluid">
-            <form action="<?= route_to('perbaharui-artikel', $result['artikel_id']) ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= route_to('perbaharui-jadwal-imunisasi', $result['jadwal_imunisasi_id']) ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field() ?>
-                <input type="hidden" value="<?= $result['slug'] ?>" name="slug_lama">
+                <input type="hidden" value="<?= $result['slug_jadwal_imunisasi'] ?>" name="slug_jadwal_imunisasi_lama">
                 <div class="row mb-3">
-                    <label for="judul" class="col-sm-2 col-form-label">Ubah Judul</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control <?= $validation->hasError('judul') ? 'is-invalid' : '' ?>" id="text" name="judul" value="<?= old('judul', $result['judul']) ?>">
+                    <label for="nama_jadwal_imunisasi" class="col-sm-4 col-form-label">Nama Jadwal</label>
+                    <div class="col-sm">
+                        <input type="text" class="form-control <?= $validation->hasError('nama_jadwal_imunisasi') ? 'is-invalid' : '' ?>" id="text" name="nama_jadwal_imunisasi" value="<?= old('nama_jadwal_imunisasi', $result['nama_jadwal_imunisasi']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
-                            <?= $validation->getError('judul') ?>
+                            <?= $validation->getError('nama_jadwal_imunisasi') ?>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="artikel_kategori_id" class="col-sm-2 col-form-label">Kategori</label>
-                    <div class="col-sm-4">
-                        <select class="form-control" name="artikel_kategori_id">
-                            <?php foreach ($artikel_kategori as $item) : ?>
-                                <option value="<?= $item['artikel_kategori_id'] ?>" <?= old('artikel_kategori_id', $result['artikel_kategori_id']) == $item['artikel_kategori_id'] ? 'selected' : '' ?>><?= $item['nama_artikel_kategori'] ?></option>
+                    <label for="" class="col-sm-4 col-form-label">Jenis Imunisasi</label>
+                    <div class="col-sm">
+                        <select class="form-control" name="jenis_imunisasi">
+                            <?php foreach ($jenis_imunisasi as $item) : ?>
+                                <option value="<?= $item['jenis_imunisasi_id'] ?>" <?= old('jenis_imunisasi', $result['jenis_imunisasi']) == $item['jenis_imunisasi_id'] ? 'selected' : '' ?>><?= $item['nama_jenis_imunisasi'] ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="gambar_artikel" class="col-sm-2 col-form-label">Gambar</label>
-                    <div class="col-sm-4">
-                        <input type="file" class="form-control <?= $validation->hasError('gambar_artikel') ? 'is-invalid' : '' ?>" name="gambar_artikel" id="gambar_artikel" value="<?= old('gambar_artikel') ?>" onchange="previewImage()">
-                        <div id="validationServer03Feedback" class="invalid-feedback">
-                            <?= $validation->getError('imgambar_artikelage') ?>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="/img/<?= $result['gambar_artikel'] != null ? $result['gambar_artikel'] : 'default-img-placeholder.png' ?>" alt="" class="img-preview img-thumbnail">
+                    <label for="deskripsi_jadwal_imunisasi" class="col-sm-4 col-form-label">Deskripsi</label>
+                    <div class="col-sm">
+                        <textarea class="form-control" id="deskripsi_jadwal_imunisasi" name="deskripsi_jadwal_imunisasi" rows="3" placeholder="<?= old('deskripsi_jadwal_imunisasi') ?>"></textarea>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-4 col-form-label">Lokasi Faskes</label>
+                    <div class="col-sm">
+                        <select class="form-control" name="lokasi_faskes_jadwal_imunisasi">
+                            <?php foreach ($faskes as $item) : ?>
+                                <option value="<?= $item['faskes_id'] ?>" <?= old('faskes_id', $result['lokasi_faskes_jadwal_imunisasi']) == $item['faskes_id'] ? 'selected' : '' ?>><?= $item['nama_faskes'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="tanggal_jadwal_imunisasi" class="col-sm-4 col-form-label">Tanggal</label>
+                    <div class="col-sm input-group date" data-provide="datepicker">
+                        <input type="text" class="form-control" name="tanggal_jadwal_imunisasi">
+                        <div class="input-group-addon">
+                            <span><i class="fa fa-calendar ml-2 mt-2"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class=" row mb-3">
-                    <label for="isi" class="col-sm-2 col-form-label">Isi</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="isi" rows="20"><?= htmlspecialchars(old('isi', $result['isi'])); ?></textarea>
+                <div class="mb-3 row">
+                    <label for="waktu_jadwal_imunisasi" class="col-sm-4 col-form-label">Waktu</label>
+                    <div class="col-sm input-group clockpicker" data-autoclose="true">
+                        <input type="text" class="form-control" name="waktu_jadwal_imunisasi" value="">
+                        <div class="input-group-addon">
+                            <span><i class="fa fa-clock ml-2 mt-2"></i></span>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="author_user_id" class="col-sm-2 col-form-label">Penulis</label>
+                    <label for="gambar_jadwal_imunisasi" class="col-sm-4 col-form-label">Gambar</label>
+                    <div class="col-sm-4">
+                        <input type="file" class="form-control <?= $validation->hasError('gambar_jadwal_imunisasi') ? 'is-invalid' : '' ?>" name="gambar_jadwal_imunisasi" id="gambar_jadwal_imunisasi" value="<?= old('gambar_jadwal_imunisasi') ?>" onchange="previewImage()">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('gambar_jadwal_imunisasi') ?>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="/img/<?= $result['gambar_jadwal_imunisasi'] != null ? $result['gambar_jadwal_imunisasi'] : 'default-img-placeholder.png' ?>" alt="" class="img-preview img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="author_user_id" class="col-sm-4 col-form-label">Penginput</label>
                     <div class="sb-1 mt-1">
-                        <input type="hidden" class="form-control-plaintext" value="<?= user()->id ?>" name="author_user_id" readonly>
+                        <input type="hidden" class="form-control-plaintext" value="<?= user()->id ?>" name="author_user_id" readonly><?= user()->username; ?>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2 right"><i class="fa fa-floppy-disk"></i> Simpan</button>

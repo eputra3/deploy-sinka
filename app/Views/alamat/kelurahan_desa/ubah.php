@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Ubah Kecamatan</h1>
-    <p class="mb-4">Data Master Perubahan Kecamatan</p>
+    <h1 class="h3 mb-2 text-gray-800">Ubah</h1>
+    <!-- <p class="mb-4">Data Master Perubahan Kecamatan</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Kecamatan</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Kecamatan</h6>
         </div>
         <div class="card-body">
             <a href="/kelurahan-desa" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -21,7 +21,7 @@
                 <?= csrf_field() ?>
                 <input type="hidden" value="<?= $result['slug_kelurahan_desa'] ?>" name="slug_kelurahan_desa_lama">
                 <div class="row mb-3">
-                    <label for="nama_kelurahan_desa" class="col-sm-2 col-form-label">Nama Kelurahan/Desa</label>
+                    <label for="nama_kelurahan_desa" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control <?= $validation->hasError('nama_kelurahan_desa') ? 'is-invalid' : '' ?>" id="text" name="nama_kelurahan_desa" value="<?= old('nama_kelurahan_desa', $result['nama_kelurahan_desa']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="kecamatan_id" class="col-sm-2 col-form-label">Kategori</label>
+                    <label for="kecamatan_id" class="col-sm-2 col-form-label">Kecamatan</label>
                     <div class="col-sm-4">
                         <select class="form-control" name="kecamatan_id">
                             <?php foreach ($kecamatan as $item) : ?>

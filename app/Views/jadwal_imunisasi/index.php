@@ -6,7 +6,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Jadwal Imunisasi</h1>
-    <p class="mb-4">Data Master Jadwal Imunisasi</p>
+    <!-- <p class="mb-4">Data Master Jadwal Imunisasi</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -38,10 +38,10 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Jadwal Imunisasi</th>
+                            <th>Nama Jadwal</th>
                             <th>Jenis Imunisasi</th>
                             <th>Lokasi Faskes</th>
-                            <th>Poster Imunisasi</th>
+                            <th>Gambar</th>
                             <th>Action</th>
                         </tr>
                     </thead>

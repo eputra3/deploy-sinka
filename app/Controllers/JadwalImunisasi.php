@@ -46,7 +46,7 @@ class JadwalImunisasi extends BaseController
             'title' => _TITLE,
             'data_jadwal_imunisasi' => $data_jadwal_imunisasi
         ];
-        return view('artikel/detail', $data);
+        return view('jadwal_imunisasi/detail', $data);
     }
     public function buatBaru()
     {
@@ -154,7 +154,7 @@ class JadwalImunisasi extends BaseController
             'faskes' => $this->_faskes_model->orderby('nama_faskes')->findAll(),
             'validation' => \Config\Services::validation()
         ];
-        return view('jadwal-imunisasi/ubah', $data);
+        return view('jadwal_imunisasi/ubah', $data);
     }
     public function perbaharuiData($id)
     {
@@ -176,7 +176,7 @@ class JadwalImunisasi extends BaseController
                     'is_unique' => '{field} sudah digunakan!'
                 ]
             ],
-            'isi' => 'required',
+            // 'isi' => 'required',
             // 'slug_jadwal_imunisasi' => 'required',
             'gambar_jadwal_imunisasi' => [
                 'rules' => 'max_size[gambar_jadwal_imunisasi,1024]|is_image[gambar_jadwal_imunisasi]|mime_in[gambar_jadwal_imunisasi,image/jpg,image/jpeg,image/png]',
@@ -223,7 +223,7 @@ class JadwalImunisasi extends BaseController
             'author_user_id' => $this->request->getVar('author_user_id')
         ])) {
             session()->setFlashdata('sukses', 'Data berhasil diperbaharui!');
-        } else session()->setFlashdata('eroe', 'Data gagal diperbaharui!');
+        } else session()->setFlashdata('eror', 'Data gagal diperbaharui!');
         return redirect()->to('/jadwal-imunisasi');
     }
     public function hapus($id)

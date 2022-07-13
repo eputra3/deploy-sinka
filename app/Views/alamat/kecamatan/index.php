@@ -6,7 +6,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Kecamatan</h1>
-    <p class="mb-4">Data Master Kecamatan di NTT</p>
+    <!-- <p class="mb-4">Data Master Kecamatan di NTT</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -41,8 +41,8 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Kota/Kabupaten</th>
-                                        <th>Nama Kecamatan</th>
-                                        <th>Logo</th>
+                                        <th>Nama</th>
+                                        <th>Gambar</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>

@@ -5,8 +5,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Kelurahan dan Desa</h1>
-    <p class="mb-4">Data Master Kelurahan di NTT</p>
+    <h1 class="h3 mb-2 text-gray-800">Kelurahan/Desa</h1>
+    <!-- <p class="mb-4">Data Master Kelurahan di NTT</p> -->
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -31,7 +31,7 @@
             <div class="col">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">List Kelurahan</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">List Kelurahan/Desa</h6>
                     </div>
                     <div class="card-body">
                         <a href="kelurahan-desa-buat-baru" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Kelurahan/Desa</a>
@@ -41,8 +41,8 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Kecamatan</th>
-                                        <th>Nama Kelurahan/Desa</th>
-                                        <th>Logo</th>
+                                        <th>Nama</th>
+                                        <th>Gambar</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>

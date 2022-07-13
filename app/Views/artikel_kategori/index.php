@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Kategori Artikel</h1>
-    <p class="mb-4">Data Master Kategori Artikel</p>
+    <!-- <p class="mb-4">Data Master Kategori Artikel</p> -->
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
         <div class="alert alert-success" role="alert">
@@ -38,7 +38,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Kategori</th>
+                                        <th>Nama</th>
                                         <th>Gambar</th>
                                         <th>Action</th>
                                     </tr>

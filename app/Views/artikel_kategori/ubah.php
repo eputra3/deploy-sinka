@@ -5,12 +5,12 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Ubah Kategori Artikel</h1>
-    <p class="mb-4">Data Master Perubahan Kategori Artikel</p>
+    <!-- <p class="mb-4">Data Master Perubahan Kategori Artikel</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Artikel Kategori</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Artikel Kategori</h6>
         </div>
         <div class="card-body">
             <a href="/artikel-kategori" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -21,7 +21,7 @@
                 <?= csrf_field() ?>
                 <input type="hidden" value="<?= $result['slug_artikel_kategori'] ?>" name="slug_artikel_kategori_lama">
                 <div class="row mb-3">
-                    <label for="nama_artikel_kategori" class="col-sm-2 col-form-label">Nama Kategori</label>
+                    <label for="nama_artikel_kategori" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control <?= $validation->hasError('nama_artikel_kategori') ? 'is-invalid' : '' ?>" id="text" name="nama_artikel_kategori" value="<?= old('nama_artikel_kategori', $result['nama_artikel_kategori']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
