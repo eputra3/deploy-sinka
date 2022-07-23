@@ -5,12 +5,12 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Tambah Jenis Imunisasi</h1>
-    <p class="mb-4">Data Master Pembuatan Jenis Imunisasi Baru</p>
+    <!-- <p class="mb-4">Data Master Pembuatan Jenis Imunisasi Baru</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Jenis Imunisasi Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Jenis Imunisasi</h6>
         </div>
         <div class="card-body">
             <a href="/jenis-imunisasi" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -20,7 +20,7 @@
             <form action="<?= route_to('simpan-jenis-imunisasi') ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                 <div class="row mb-3">
-                    <label for="nama_jenis_imunisasi" class="col-sm-2 col-form-label">Nama Jenis Imunisasi</label>
+                    <label for="nama_jenis_imunisasi" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control <?= $validation->hasError('nama_jenis_imunisasi') ? 'is-invalid' : '' ?>" id="text" name="nama_jenis_imunisasi" value="<?= old('nama_jenis_imunisasi') ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">

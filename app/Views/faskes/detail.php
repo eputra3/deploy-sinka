@@ -3,8 +3,8 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Detail Data Faskes</h1>
-    <p class="mb-4">Data Master Detail Faskes</p>
+    <h1 class="h3 mb-2 text-gray-800">Detail</h1>
+    <!-- <p class="mb-4">Data Master Detail Faskes</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -22,19 +22,19 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama Faskes</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['nama_faskes']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Latitude Faskes</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Latitude</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['lat_faskes']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Longitude Faskes</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Longitude</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['lon_faskes']; ?>">
                             </div>
@@ -58,19 +58,13 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Ayah</label>
-                            <div class="col-sm">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['no_hp_faskes']; ?>">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Alamat Faskes</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Alamat</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['alamat_faskes']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Gambar Faskes</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Gambar</label>
                             <div class="col-sm">
                                 <img class="img-fluid" src="/img/<?= $data_faskes['gambar_faskes']; ?>" alt="..." width="450" />
                             </div>

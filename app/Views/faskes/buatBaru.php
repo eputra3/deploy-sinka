@@ -3,12 +3,12 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Buat Baru Faskes</h1>
-    <p class="mb-4">Data Master Pembuatan Faskes Baru</p>
+    <h1 class="h3 mb-2 text-gray-800">Tambah Data Faskes</h1>
+    <!-- <p class="mb-4">Data Master Pembuatan Faskes Baru</p> -->
     <!-- Card detail artikel -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Faskes Baru</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Pembuatan Data Baru Faskes</h6>
         </div>
         <div class="card-body">
             <div class="row">
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Nama Faskes</label>
+                            <label for="" class="col-sm-4 col-form-label">Nama</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('nama_faskes') ? 'is-invalid' : '' ?>" id="text" name="nama_faskes" value="<?= old('nama_faskes') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Latitude Faskes</label>
+                            <label for="" class="col-sm-4 col-form-label">Latitude</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('lat_faskes') ? 'is-invalid' : '' ?>" id="text" name="lat_faskes" value="<?= old('lat_faskes') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Longitude Faskes</label>
+                            <label for="" class="col-sm-4 col-form-label">Longitude</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('lon_faskes') ? 'is-invalid' : '' ?>" id="text" name="lon_faskes" value="<?= old('lon_faskes') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="" class="col-sm-4 col-form-label">Nomor HP Faskes</label>
+                            <label for="" class="col-sm-4 col-form-label">Nomor HP</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control <?= $validation->hasError('no_hp_faskes') ? 'is-invalid' : '' ?>" id="text" name="no_hp_faskes" value="<?= old('no_hp_faskes') ?>">
                                 <div id="validationServer03Feedback" class="invalid-feedback">
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="formFile" class="col-sm-4 col-form-label">Gambar Faskes</label>
+                            <label for="formFile" class="col-sm-4 col-form-label">Gambar</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control <?= $validation->hasError('gambar_faskes') ? 'is-invalid' : '' ?>" name="gambar_faskes" id="gambar_faskes" value="<?= old('gambar_faskes') ?>" onchange="previewImage()">
                                 <div id="validationServer03Feedback" class="invalid-feedback">

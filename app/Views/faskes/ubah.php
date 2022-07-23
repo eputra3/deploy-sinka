@@ -4,13 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Ubah Data Faskes</h1>
-    <p class="mb-4">Data Master Perubahan Data Faskes</p>
+    <h1 class="h3 mb-2 text-gray-800">Ubah</h1>
+    <!-- <p class="mb-4">Data Master Perubahan Data Faskes</p> -->
     <!-- DataTales Example -->
     <!-- <div class="row"> -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Formulir Ubah Data Faskes</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Formulir Perubahan Data Faskes</h6>
         </div>
         <div class="card-body">
             <a href="/faskes" class="btn btn-info mb-2"><i class="fa fa-arrow-left"></i> Kembali</a>
@@ -20,7 +20,7 @@
                 <?= csrf_field() ?>
                 <input type="hidden" value="<?= $result['slug_faskes'] ?>" name="slug_faskes_lama">
                 <div class=" row mb-3">
-                    <label for="nama_faskes" class="col-sm-4 col-form-label">Nama Faskes</label>
+                    <label for="nama_faskes" class="col-sm-4 col-form-label">Nama</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('nama_faskes') ? 'is-invalid' : '' ?>" id="text" name="nama_faskes" value="<?= old('nama_faskes', $result['nama_faskes']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class=" row mb-3">
-                    <label for="lat_faskes" class="col-sm-4 col-form-label">Latitude Faskes</label>
+                    <label for="lat_faskes" class="col-sm-4 col-form-label">Latitude</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('lat_faskes') ? 'is-invalid' : '' ?>" id="text" name="lat_faskes" value="<?= old('lat_faskes', $result['lat_faskes']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class=" row mb-3">
-                    <label for="lon_faskes" class="col-sm-4 col-form-label">Longitude Faskes</label>
+                    <label for="lon_faskes" class="col-sm-4 col-form-label">Longitude</label>
                     <div class="col-sm">
                         <input type="text" class="form-control <?= $validation->hasError('lon_faskes') ? 'is-invalid' : '' ?>" id="text" name="lon_faskes" value="<?= old('lon_faskes', $result['lon_faskes']) ?>">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -88,13 +88,13 @@
                     </div>
                 </div>
                 <div class=" row mb-3">
-                    <label for="alamat_faskes" class="col-sm-4 col-form-label">Alamat Faskes</label>
+                    <label for="alamat_faskes" class="col-sm-4 col-form-label">Alamat</label>
                     <div class="col-sm">
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="alamat_faskes" rows="3"><?= htmlspecialchars(old('alamat_faskes', $result['alamat_faskes'])); ?></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="gambar_faskes" class="col-sm-4 col-form-label">Gambar Faskes</label>
+                    <label for="gambar_faskes" class="col-sm-4 col-form-label">Gambar</label>
                     <div class="col-sm">
                         <input type="file" class="form-control <?= $validation->hasError('gambar_faskes') ? 'is-invalid' : '' ?>" name="gambar_faskes" id="gambar_faskes" value="<?= old('gambar_faskes') ?>" onchange="previewImage()">
                         <div id="validationServer03Feedback" class="invalid-feedback">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="author_user_id" class="col-sm-4 col-form-label">Penulis</label>
+                    <label for="author_user_id" class="col-sm-4 col-form-label">Penginput</label>
                     <div class="sb-1 mt-1">
                         <input type="hidden" class="form-control-plaintext" value="<?= user()->id ?>" name="author_user_id" readonly>
                     </div>

@@ -101,12 +101,12 @@
 <div class="py-5 bg-light">
     <div class="container px-5 my-5">
         <div class="row">
-            <div class="col text-center">
+            <!-- <div class="col text-center">
                 <img class="align-center" src="http://dinkes.sanggau.go.id/wp-content/uploads/2018/10/cropped-logo-kemenkes-baru-2016-1.png" alt="" width="50" height="50" />
                 <div class="fw-bold">
                     Kementerian Kesehatan RI
                 </div>
-            </div>
+            </div> -->
             <div class="col text-center">
                 <img class="align-center" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Coat_of_arms_of_East_Nusa_Tenggara.svg" alt="" width="50" height="50" />
                 <div class="fw-bold">
@@ -119,12 +119,12 @@
                     Tim Tapaleuk | PT.Lingkar Inovasi Nusantara
                 </div>
             </div>
-            <div class="col text-center">
+            <!-- <div class="col text-center">
                 <img class="align-center" src="https://1.bp.blogspot.com/-H0d7hj0hR6k/YRzkdOse1OI/AAAAAAAAFuQ/tr9d85pfVzIrWye4g99nAccyp_qOGSebgCLcBGAsYHQ/s1600/Logo%2BBank%2BNTT.png" alt="" width="70" height="" />
                 <div class="fw-bold">
                     PT.Bank Pembangunan Daerah NTT
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

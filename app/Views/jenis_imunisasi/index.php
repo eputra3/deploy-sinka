@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Jenis Imunisasi</h1>
-    <p class="mb-4">Data Master Jenis Imunisasi</p>
+    <!-- <p class="mb-4">Data Master Jenis Imunisasi</p> -->
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
         <div class="alert alert-success" role="alert">
@@ -29,16 +29,16 @@
             <div class="col">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">List Kategori Artikel</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">List Jenis Imunisasi</h6>
                     </div>
                     <div class="card-body">
-                        <a href="jenis-imunisasi-buat-baru" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Kategori Artikel</a>
+                        <a href="jenis-imunisasi-buat-baru" class="btn btn-success mb-2"><i class="fa fa-plus-circle"></i> Tambah Jenis Imunisasi</a>
                         <div class="table">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Kategori</th>
+                                        <th>Nama</th>
                                         <th>Gambar</th>
                                         <th>Action</th>
                                     </tr>
