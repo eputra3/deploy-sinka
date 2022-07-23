@@ -38,6 +38,12 @@
                 </div>
             </div>
         </div>
+        <div class="text-end mb-5 mb-xl-0">
+            <a class="text-decoration-none" href="/kumpulan-jadwal-imunisasi">
+                Lihat Semua Jadwal Imunisasi
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
 </section>
 
 <!-- Lokasi Faskes -->
@@ -71,7 +77,7 @@
 
     <?php foreach ($data_faskes as $item) : ?>
         L.marker([<?= $item['lat_faskes']; ?>, <?= $item['lon_faskes']; ?>]).addTo(map)
-            .bindPopup('<?= $item['nama_faskes']; ?>');
+            .bindPopup('<b><?= $item['nama_faskes']; ?></b><br><?= $item['no_hp_faskes']; ?><br><?= $item['alamat_faskes']; ?>');
     <?php endforeach; ?>
 </script>
 <!-- End Lokasi Faskes -->
@@ -167,6 +173,12 @@
                     </div>
                 </div>
             <?php endforeach; ?>
+            <div class="text-end mb-5 mb-xl-0">
+                <a class="text-decoration-none" href="/kumpulan-artikel-berita">
+                    Lihat Semua Artikel/Berita
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
         </div>
 
         <!-- Call to action-->

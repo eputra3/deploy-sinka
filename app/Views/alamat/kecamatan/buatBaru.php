@@ -31,7 +31,7 @@
                 <div class="row mb-3">
                     <label for="kota_kabupaten_id" class="col-sm-2 col-form-label">Kota/Kabupaten</label>
                     <div class="col-sm-10">
-                        <select class="form-select" id="specificSizeSelect" name="kota_kabupaten_id">
+                        <select class="form-control js-example-basic-single" id="specificSizeSelect" name="kota_kabupaten_id">
                             <?php foreach ($kota_kabupaten as $item) : ?>
                                 <option value="<?= $item['kota_kabupaten_id'] ?>" <?= old('kota_kabupaten_id') == $item['kota_kabupaten_id'] ? 'selected' : '' ?>><?= $item['nama_kota_kabupaten'] ?></option>
                             <?php endforeach; ?>
@@ -55,5 +55,11 @@
 
 </div>
 <!-- /.container-fluid -->
+
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
 
 <?= $this->endSection(); ?>

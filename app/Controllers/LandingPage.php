@@ -41,10 +41,24 @@ class LandingPage extends BaseController
         ];
         return view('pagesLanding/detail_artikel_berita', $data);
     }
-    public function tentang()
+    public function kumpulanJadwalImunisasi()
     {
-
-
-        return view('pagesLanding/tentang');
+        $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->getJadwalImunisasi();
+        // dd($data_artikel);
+        $data = [
+            'title' => 'Kumpulan Jadwal Imunisasi',
+            'data_jadwal_imunisasi' => $data_jadwal_imunisasi
+        ];
+        return view('pagesLanding/kumpulan_jadwal_imunisasi', $data);
+    }
+    public function kumpulanArtikelBerita()
+    {
+        $data_artikel = $this->_artikel_model->getArtikel();
+        // dd($data_artikel);
+        $data = [
+            'title' => 'Kumpulan Artikel/Berita',
+            'data_artikel' => $data_artikel
+        ];
+        return view('pagesLanding/kumpulan_artikel_berita', $data);
     }
 }

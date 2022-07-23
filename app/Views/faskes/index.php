@@ -6,7 +6,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Data Faskes</h1>
-    <p class="mb-4">Data Master Faskes</p>
+    <p class="mb-4">Peta Sebaran Fasilitas Kesehatan (Faskes)</p>
 
     <!-- Alert / Pesan Flash -->
     <?php if (session()->getFlashdata('sukses')) : ?>
@@ -43,7 +43,7 @@
 
         <?php foreach ($data_faskes as $item) : ?>
             L.marker([<?= $item['lat_faskes']; ?>, <?= $item['lon_faskes']; ?>]).addTo(map)
-                .bindPopup('<?= $item['nama_faskes']; ?>');
+                .bindPopup('<b><?= $item['nama_faskes']; ?></b><br><?= $item['no_hp_faskes']; ?><br><?= $item['alamat_faskes']; ?>');
         <?php endforeach; ?>
     </script>
 

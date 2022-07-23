@@ -34,7 +34,9 @@ $routes->setAutoRoute(true);
 
 // Landing Page
 $routes->get('/', 'LandingPage::index');
+$routes->get('/kumpulan-jadwal-imunisasi', 'LandingPage::kumpulanJadwalImunisasi');
 $routes->get('artikel-berita-detail/(:any)', 'LandingPage::detail/$1');
+$routes->get('/kumpulan-artikel-berita', 'LandingPage::kumpulanArtikelBerita');
 
 // Restricting Admin
 $routes->get('/admin', 'Admin::index', ['filter' => 'role:admin']);

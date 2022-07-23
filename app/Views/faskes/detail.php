@@ -95,7 +95,7 @@
         }).addTo(map);
 
         L.marker([<?= $data_faskes['lat_faskes']; ?>, <?= $data_faskes['lon_faskes']; ?>]).addTo(map)
-            .bindPopup('<?= $data_faskes['nama_faskes']; ?>');
+            .bindPopup('<b><?= $data_faskes['nama_faskes']; ?></b><br><?= $data_faskes['no_hp_faskes']; ?><br><?= $data_faskes['alamat_faskes']; ?>');
     </script>
 </div>
 
