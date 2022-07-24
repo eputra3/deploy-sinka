@@ -43,7 +43,7 @@ class LandingPage extends BaseController
     }
     public function kumpulanJadwalImunisasi()
     {
-        $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->getJadwalImunisasi();
+        $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->orderBy('jadwal_imunisasi_id', 'DESC')->paginate();
         // dd($data_artikel);
         $data = [
             'title' => 'Kumpulan Jadwal Imunisasi',
@@ -53,7 +53,7 @@ class LandingPage extends BaseController
     }
     public function kumpulanArtikelBerita()
     {
-        $data_artikel = $this->_artikel_model->getArtikel();
+        $data_artikel = $this->_artikel_model->orderBy('artikel_id', 'DESC')->paginate();
         // dd($data_artikel);
         $data = [
             'title' => 'Kumpulan Artikel/Berita',
