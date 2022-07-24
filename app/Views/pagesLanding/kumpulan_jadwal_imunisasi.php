@@ -14,7 +14,7 @@
                 <div class="row gx-5">
                     <?php foreach ($data_jadwal_imunisasi as $item) : ?>
                         <div class="col-lg-3 mb-5">
-                            <div class="card border-light mb-3" style="max-width: 18rem;">
+                            <div class="card border-info mb-3" style="max-width: 18rem;">
                                 <div class="card-header">
                                     <b><?= $item['nama_jadwal_imunisasi']; ?> </b>
                                 </div>
@@ -25,7 +25,13 @@
                                     <h6 class="card-title">
                                         <i class="fa fa-clock"></i> <?= $item['waktu_jadwal_imunisasi']; ?>
                                     </h6>
-                                    <p class="card-text"><?= substr($item['deskripsi_jadwal_imunisasi'], 0, 150) ?></p>
+                                    <h6 class="card-title">
+                                        <i class="fa fa-map-location-dot"></i> <?= $item['nama_faskes']; ?> <br><?= $item['alamat_faskes']; ?>
+                                    </h6>
+                                    <h6 class="card-title">
+                                        <i class="fa fa-pills"></i> <?= $item['nama_jenis_imunisasi']; ?>
+                                    </h6>
+                                    <p class="card-text"><?= substr($item['deskripsi_jadwal_imunisasi'], 0, 150) ?>....</p>
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\KelurahanDesaModel;
 use App\Models\KecamatanModel;
 
-define('_TITLE', 'Master Kelurahan dan Desa');
+define('_TITLE', 'Data Master Kelurahan dan Desa');
 
 class KelurahanDesa extends BaseController
 {

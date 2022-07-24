@@ -16,11 +16,13 @@ class FaskesModel extends Model
             $this->join('users', 'faskes.author_user_id = users.id');
             // $this->join('identitas', 'identitas.identitas_id = ayah.identitas_ayah');
             // $this->join('pekerjaan', 'pekerjaan.pekerjaan_id = ayah.pekerjaan_ayah');
+            // $this->join('jadwal_imunisasi', 'jadwal_imunisasi.lokasi_faskes_jadwal_imunisasi = faskes.faskses_id');
             return $this->get()->getResultArray();
         } else {
             $this->join('users', 'faskes.author_user_id = users.id');
             // $this->join('identitas', 'identitas.identitas_id = ayah.identitas_ayah');
             // $this->join('pekerjaan', 'pekerjaan.pekerjaan_id = ayah.pekerjaan_ayah');
+            // $this->join('jadwal_imunisasi', 'jadwal_imunisasi.lokasi_faskes_jadwal_imunisasi = faskes.faskses_id');
             $this->where(['slug_faskes' => $slug_faskes]);
             return $this->first();
         }

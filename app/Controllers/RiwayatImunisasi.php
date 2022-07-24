@@ -9,7 +9,7 @@ use App\Models\FaskesModel;
 // use App\Models\KecamatanModel;
 // use App\Models\KelurahanDesaModel;
 
-define('_TITLE', 'Data Ayah');
+define('_TITLE', 'Data Riwayat Imunisasi');
 
 class RiwayatImunisasi extends BaseController
 {

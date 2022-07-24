@@ -12,7 +12,7 @@
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="#!">Kontak</a>
                 <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="<?php echo site_url('/user') ?>">Masuk</a>
+                <a class="link-light small" href="<?php echo site_url('/user') ?>"><i class="fa fa-unlock-keyhole"></i> Masuk</a>
             </div>
         </div>
     </div>

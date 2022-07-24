@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ArtikelKategoriModel;
 use App\Models\ArtikelModel;
 
-define('_TITLE', 'Daftar Artikel');
+define('_TITLE', 'Daftar Artikel/Berita');
 
 class Artikel extends BaseController
 {

@@ -9,7 +9,7 @@ use App\Models\KecamatanModel;
 use App\Models\KelurahanDesaModel;
 use App\Models\FaskesModel;
 
-define('_TITLE', 'Jadwal Imunisasi');
+define('_TITLE', 'Data Jadwal Imunisasi');
 
 class JadwalImunisasi extends BaseController
 {

@@ -30,7 +30,7 @@
                 <div class="row gx-5 row-cols-1 row-cols-md-2">
                     <?php foreach ($data_jadwal_imunisasi as $item) : ?>
                         <div class="col mb-5 h-100">
-                            <div class="badge bg-primary bg-gradient rounded-pill mb-2"><i class="fa fa-calendar"></i> <?= $item['tanggal_jadwal_imunisasi']; ?>, <?= $item['waktu_jadwal_imunisasi']; ?></div>
+                            <div class="badge bg-primary bg-gradient mb-2"><i class="fa fa-calendar"></i> <?= $item['tanggal_jadwal_imunisasi']; ?>, <?= $item['waktu_jadwal_imunisasi']; ?></div>
                             <h2 class="h5"><?= $item['nama_jadwal_imunisasi']; ?></h2>
                             <p class="mb-0"><?= substr($item['deskripsi_jadwal_imunisasi'], 0, 150) ?></p>
                         </div>

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\JenisImunisasiModel;
 // use App\Models\KecamatanModel;
 
-define('_TITLE', 'Jenis Imunisasi');
+define('_TITLE', 'Data Master Jenis Imunisasi');
 
 class JenisImunisasi extends BaseController
 {

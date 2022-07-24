@@ -16,6 +16,7 @@ class JadwalImunisasiModel extends Model
         if ($slug_jadwal_imunisasi === null) {
             $this->join('users', 'jadwal_imunisasi.author_user_id = users.id');
             $this->join('jenis_imunisasi', 'jenis_imunisasi.jenis_imunisasi_id = jadwal_imunisasi.jenis_imunisasi');
+            // $this->join('faskes', 'faskes.faskes_id = jadwal_imunisasi.lokasi_faskes_jadwal_imunisasi');
             $this->join('faskes', 'faskes.faskes_id = jadwal_imunisasi.lokasi_faskes_jadwal_imunisasi');
             return $this->get()->getResultArray();
         } else {

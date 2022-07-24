@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\KotaKabupatenModel;
 use App\Models\KecamatanModel;
 
-define('_TITLE', 'Master Kota dan Kabupaten');
+define('_TITLE', 'Data Master Kota dan Kabupaten');
 
 class KotaKabupaten extends BaseController
 {

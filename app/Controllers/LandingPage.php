@@ -43,22 +43,23 @@ class LandingPage extends BaseController
     }
     public function kumpulanJadwalImunisasi()
     {
-        $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->orderBy('jadwal_imunisasi_id', 'DESC')->paginate();
-        // dd($data_artikel);
+        // $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->orderBy('jadwal_imunisasi_id', 'DESC')->paginate();
+        $data_jadwal_imunisasi = $this->_jadwal_imunisasi_model->getJadwalImunisasi();
         $data = [
             'title' => 'Kumpulan Jadwal Imunisasi',
-            'data_jadwal_imunisasi' => $data_jadwal_imunisasi
+            'data_jadwal_imunisasi' => $data_jadwal_imunisasi,
         ];
+        // dd($data_faskes);
         return view('pagesLanding/kumpulan_jadwal_imunisasi', $data);
     }
     public function kumpulanArtikelBerita()
     {
         $data_artikel = $this->_artikel_model->orderBy('artikel_id', 'DESC')->paginate();
-        // dd($data_artikel);
         $data = [
             'title' => 'Kumpulan Artikel/Berita',
-            'data_artikel' => $data_artikel
+            'data_artikel' => $data_artikel,
         ];
+        // dd($data_artikel);
         return view('pagesLanding/kumpulan_artikel_berita', $data);
     }
 }

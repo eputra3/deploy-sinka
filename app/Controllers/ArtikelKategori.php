@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\ArtikelKategoriModel;
 // use App\Models\KecamatanModel;
 
-define('_TITLE', 'Kategori Artikel');
+define('_TITLE', 'Data Master Kategori Artikel');
 
 class ArtikelKategori extends BaseController
 {
