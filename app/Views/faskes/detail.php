@@ -42,19 +42,19 @@
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-4 col-form-label">Kota/Kabupaten</label>
                             <div class="col-sm">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_kota_kabupaten['0']['nama_kota_kabupaten']; ?>">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['nama_kota_kabupaten']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-4 col-form-label">Kecamatan</label>
                             <div class="col-sm">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_kecamatan['0']['nama_kecamatan']; ?>">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['nama_kecamatan']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-4 col-form-label">Kelurahan/Desa</label>
                             <div class="col-sm">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_kelurahan_desa['0']['nama_kelurahan_desa']; ?>">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_faskes['nama_kelurahan_desa']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">

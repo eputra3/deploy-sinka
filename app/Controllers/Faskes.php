@@ -44,16 +44,16 @@ class Faskes extends BaseController
     public function detail($slug_faskes)
     {
         $data_faskes = $this->_faskes_model->getFaskes($slug_faskes);
-        $data_kota_kabupaten = $this->_kota_kabupaten_model->getKotaKabupaten();
-        $data_kecamatan = $this->_kecamatan_model->getKecamatan();
-        $data_kelurahan_desa = $this->_kelurahan_desa_model->getKelurahanDesa();
+        // $data_kota_kabupaten = $this->_kota_kabupaten_model->getKotaKabupaten();
+        // $data_kecamatan = $this->_kecamatan_model->getKecamatan();
+        // $data_kelurahan_desa = $this->_kelurahan_desa_model->getKelurahanDesa();
         // dd($data_faskes);
         $data = [
             'title' => _TITLE,
             'data_faskes' => $data_faskes,
-            'data_kota_kabupaten' => $data_kota_kabupaten,
-            'data_kecamatan' => $data_kecamatan,
-            'data_kelurahan_desa' => $data_kelurahan_desa,
+            // 'data_kota_kabupaten' => $data_kota_kabupaten,
+            // 'data_kecamatan' => $data_kecamatan,
+            // 'data_kelurahan_desa' => $data_kelurahan_desa,
         ];
         // d($data);
         return view('faskes/detail', $data);

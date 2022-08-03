@@ -14,15 +14,17 @@ class AnakModel extends Model
     {
         if ($slug_anak === null) {
             $this->join('users', 'anak.author_user_id = users.id');
-            // $this->join('identitas', 'identitas.identitas_id = ayah.identitas_ayah');
-            // $this->join('pekerjaan', 'pekerjaan.pekerjaan_id = ayah.pekerjaan_ayah');
+            $this->join('kota_kabupaten', 'kota_kabupaten.kota_kabupaten_id = anak.kota_kabupaten');
+            $this->join('kecamatan', 'kecamatan.kecamatan_id = anak.kecamatan');
+            $this->join('kelurahan_desa', 'kelurahan_desa.kelurahan_desa_id = anak.kelurahan_desa');
             $this->join('ayah', 'ayah.ayah_id = anak.ayah');
             $this->join('ibu', 'ibu.ibu_id = anak.ibu');
             return $this->get()->getResultArray();
         } else {
             $this->join('users', 'anak.author_user_id = users.id');
-            // $this->join('identitas', 'identitas.identitas_id = ayah.identitas_ayah');
-            // $this->join('pekerjaan', 'pekerjaan.pekerjaan_id = ayah.pekerjaan_ayah');
+            $this->join('kota_kabupaten', 'kota_kabupaten.kota_kabupaten_id = anak.kota_kabupaten');
+            $this->join('kecamatan', 'kecamatan.kecamatan_id = anak.kecamatan');
+            $this->join('kelurahan_desa', 'kelurahan_desa.kelurahan_desa_id = anak.kelurahan_desa');
             $this->join('ayah', 'ayah.ayah_id = anak.ayah');
             $this->join('ibu', 'ibu.ibu_id = anak.ibu');
             $this->where(['slug_anak' => $slug_anak]);

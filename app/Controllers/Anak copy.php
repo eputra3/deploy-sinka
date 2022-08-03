@@ -16,7 +16,6 @@ class Anak extends BaseController
 {
     private $_anak_model, $_ayah_model, $_ibu_model,  $_kota_kabupaten_model, $_kecamatan_model, $_kelurahan_desa_model;
     private $_defaultImg;
-
     public function __construct()
     {
         $this->_anak_model = new AnakModel();
@@ -27,7 +26,7 @@ class Anak extends BaseController
         $this->_kelurahan_desa_model = new KelurahanDesaModel();
         $this->_defaultImg = "default-img-placeholder.png";
 
-        // $this->_kota_kabupaten_model = new _kota_kabupaten_model();
+        $this->kotakabupatenModel = new KotaKabupatenModel();
     }
     public function index()
     {
@@ -45,18 +44,18 @@ class Anak extends BaseController
     public function detail($slug_anak)
     {
         $data_anak = $this->_anak_model->getAnak($slug_anak);
-        // $data_kota_kabupaten = $this->_kota_kabupaten_model->getKotaKabupaten();
-        // $data_kecamatan = $this->_kecamatan_model->getKecamatan();
-        // $data_kelurahan_desa = $this->_kelurahan_desa_model->getKelurahanDesa();
+        $data_kota_kabupaten = $this->_kota_kabupaten_model->getKotaKabupaten();
+        $data_kecamatan = $this->_kecamatan_model->getKecamatan();
+        $data_kelurahan_desa = $this->_kelurahan_desa_model->getKelurahanDesa();
         // dd($data_anak);
         $data = [
             'title' => _TITLE,
             'data_anak' => $data_anak,
-            // 'data_kota_kabupaten' => $data_kota_kabupaten,
-            // 'data_kecamatan' => $data_kecamatan,
-            // 'data_kelurahan_desa' => $data_kelurahan_desa,
+            'data_kota_kabupaten' => $data_kota_kabupaten,
+            'data_kecamatan' => $data_kecamatan,
+            'data_kelurahan_desa' => $data_kelurahan_desa,
         ];
-        // d($data_anak);
+        // d($data);
         return view('anak/detail', $data);
     }
     public function buatBaru()
@@ -65,7 +64,7 @@ class Anak extends BaseController
             'title' => _TITLE,
             'ayah' => $this->_ayah_model->orderby('nama_ayah')->findAll(),
             'ibu' => $this->_ibu_model->orderby('nama_ibu')->findAll(),
-            'kota_kabupaten' => $this->_kota_kabupaten_model->orderBy('nama_kota_kabupaten', 'ASC')->findAll(),
+            'kota_kabupaten' => $this->kotakabupatenModel->orderBy('nama_kota_kabupaten', 'ASC')->findAll(),
             'validation' => \Config\Services::validation()
 
         ];
@@ -158,7 +157,7 @@ class Anak extends BaseController
         $data = [
             "title" => _TITLE,
             "result" => $this->_anak_model->getAnak($slug_anak),
-            'kota_kabupaten' => $this->_kota_kabupaten_model->orderBy('nama_kota_kabupaten', 'ASC')->findAll(),
+            'kota_kabupaten' => $this->kotakabupatenModel->orderBy('nama_kota_kabupaten', 'ASC')->findAll(),
             // 'kota_kabupaten' => $this->_identitas_model->orderby('nama_kota_kabupaten')->findAll(),
             'kecamatan' => $this->_kecamatan_model->orderby('nama_kecamatan')->findAll(),
             'kelurahan_desa' => $this->_kelurahan_desa_model->orderby('nama_kelurahan_desa')->findAll(),

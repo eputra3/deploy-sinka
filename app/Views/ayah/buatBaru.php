@@ -126,12 +126,12 @@
                 <div class="mb-3 row">
                     <label for="" class="col-sm-4 col-form-label">Jumlah Anak</label>
                     <div class="col-sm">
-                        <select class="form-control" id="specificSizeSelect" name="jumlah_anak_ayah">
-                            <option value="1">Satu</option>
-                            <option value="2">Dua</option>
-                            <option value="3">Tiga</option>
-                            <option value="4">Empat</option>
-                            <option value="5">Lima</option>
+                        <select class="form-control" id="jumlah_anak_ayah" name="jumlah_anak_ayah">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                 </div>

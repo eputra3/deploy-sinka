@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/dasbor'); ?>">
+        <a class="nav-link" href="<?= base_url('dasbor'); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dasbor</span></a>
     </li>

@@ -214,7 +214,7 @@ class Ibu extends BaseController
         }
 
         $slug_ibu = url_title($this->request->getVar('nama_ibu'), '-', true);
-        if ($this->_ayah_model->save([
+        if ($this->_ibu_model->save([
             'ibu_id' => $id,
             'slug_ibu' => $slug_ibu,
             'identitas_ibu' => $this->request->getVar('identitas_ibu'),

@@ -72,11 +72,11 @@
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-4 col-form-label">Alamat Lengkap</label>
                             <div class="col-sm">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ibu['alamat_ibu']; ?>">
+                                <p class=""><?php echo nl2br(htmlspecialchars($data_ibu['alamat_ibu'])) ?></p>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Namam Suami</label>
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama Suami</label>
                             <div class="col-sm">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $data_ibu['nama_ayah']; ?>">
                             </div>

@@ -47,7 +47,7 @@
                 <div class="mb-3 row">
                     <label for="tanggal_lahir_ibu" class="col-sm-4 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm input-group date" data-provide="datepicker">
-                        <input type="text" class="form-control" value="<?= old('tempat_lahir_ibu', $result['tempat_lahir_ibu']) ?>" name="tempat_lahir_ibu">
+                        <input type="text" class="form-control" value="<?= old('tanggal_lahir_ibu', $result['tanggal_lahir_ibu']) ?>" name="tanggal_lahir_ibu">
                         <div class="input-group-addon">
                             <span><i class="fa fa-calendar ml-2 mt-2"></i></span>
                         </div>
@@ -83,6 +83,12 @@
 
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-4 col-form-label">Alamat Lengkap</label>
+                    <div class="col-sm">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="alamat_ibu" rows="3" placeholder="<?= old('alamat_ibu') ?>"></textarea>
+                    </div>
+                </div>
                 <div class="row mb-3">
                     <label for="gambar_identitas_ibu" class="col-sm-4 col-form-label">Foto Identitas</label>
                     <div class="col-sm">
@@ -109,11 +115,11 @@
                     <label for="" class="col-sm-4 col-form-label">Jumlah Anak</label>
                     <div class="col-sm">
                         <select class="form-control" id="jumlah_anak_ibu" name="jumlah_anak_ibu">
-                            <option value="1">Satu</option>
-                            <option value="2">Dua</option>
-                            <option value="3">Tiga</option>
-                            <option value="4">Empat</option>
-                            <option value="5">Lima</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                 </div>
